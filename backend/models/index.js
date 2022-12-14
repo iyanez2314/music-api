@@ -1,3 +1,4 @@
 const Artist = require("./Artist");
+const Albums = require("./Albums");
 
-module.exports = { Artist };
+module.exports = { Artist, Albums };

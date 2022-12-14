@@ -1,9 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -12,11 +11,9 @@ app.use(require("./routes"));
 
 mongoose.set("debug", true);
 
-mongoose.connect("mongodb://localhost:27017/music-api", {
+mongoose.connect("mongodb://127.0.0.1:27017/artist-api", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-app.listen(port, () => {
-  console.log(`Server now on port ${port}`);
-});
+app.listen(port, () => console.log(`🌍 Connected on localHost:${port}`));

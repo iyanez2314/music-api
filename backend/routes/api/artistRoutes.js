@@ -6,7 +6,7 @@ const {
   createArtist,
   updateArtist,
   deleteArtist,
-} = require("../../controllers/artist-controllers");
+} = require("../../controllers/artistControllers");
 
 router.route("/").get(getAllArtist).post(createArtist);
 
