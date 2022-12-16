@@ -30,6 +30,7 @@ const artistController = {
 
   // * creating a Artist
   createArtist({ body }, res) {
+    console.log(body);
     Artist.create(body)
       .then((dbArtistData) => res.json(dbArtistData))
       .catch((err) => res.json(err));
