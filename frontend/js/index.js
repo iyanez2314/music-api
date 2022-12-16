@@ -1,4 +1,5 @@
 const formEl = document.getElementById("form");
+const listEl = document.getElementById("list");
 
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
